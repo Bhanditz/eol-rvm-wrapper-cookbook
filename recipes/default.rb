@@ -8,7 +8,7 @@ require "ostruct"
 include_recipe("rvm")
 
 def set_ruby(name, data)
-  rvm_ruby name do
+  rvm_ruby name.to_sym do
     action data.action.to_sym if data.action
   end
 end
