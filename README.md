@@ -27,11 +27,15 @@ Two things have to be done t use this cookbook
 
 ```json
 {
-  "_readme": "Information to create firewall rules",
+  "_readme": "Information to setup rubies with rvm",
   "id": "config",
   "rvm_ruby": {
     "ruby-2.1.1": {
       "nodes": []
+    },
+    "ruby-1.9.3-p443": {
+      "nodes": [],
+      "action": "remove"
     },
     "ruby-1.8.7-p333": {
       "nodes": ["old_node"],

@@ -7,13 +7,13 @@ require "ostruct"
 
 include_recipe("rvm")
 
-def set_ruby(rule_name)
+def set_ruby(rule_name, data)
   rvm_ruby name do
     action data.action.to_sym if data.action
   end
 end
 
-def set_default_ruby(name, data)
+def set_default_ruby(name)
   rvm_default_ruby name
 end
 
